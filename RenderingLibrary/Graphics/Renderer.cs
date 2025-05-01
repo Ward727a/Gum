@@ -1225,7 +1225,7 @@ public class CustomEffectManager
         }
 
         // Shader should be capitalized
-        try { Effect = mContentManager.Load<Effect>("Content/Shader"); } catch { }
+        //try { Effect = mContentManager.Load<Effect>("Content/Shader"); } catch { }
     }
 
     static EffectTechnique GetTechniqueVariant(bool useDefaultOrPointFilter, EffectTechnique point, EffectTechnique pointLinearized, EffectTechnique linear, EffectTechnique linearLinearized)

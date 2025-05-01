@@ -11,9 +11,9 @@ namespace MonoGameGum.GueDeriving;
 
 public class CircleRuntime : BindableGue
 {
-    LineCircle containedLineCircle;
+    protected LineCircle containedLineCircle;
 
-    LineCircle ContainedLineCircle
+    protected LineCircle ContainedLineCircle
     {
         get
         {
@@ -22,6 +22,14 @@ public class CircleRuntime : BindableGue
                 containedLineCircle = this.RenderableComponent as LineCircle;
             }
             return containedLineCircle;
+        }
+    }
+    public virtual float LineWidth
+    {
+        get => ContainedLineCircle.LinePixelWidth;
+        set
+        {
+            ContainedLineCircle.LinePixelWidth = value;
         }
     }
 

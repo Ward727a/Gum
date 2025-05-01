@@ -90,6 +90,12 @@ namespace RenderingLibrary.Math.Geometry
             }
         }
 
+        public float LinePixelWidth
+        {
+            get { return mLinePrimitive.LinePixelWidth; }
+            set { mLinePrimitive.LinePixelWidth = value; }
+        }
+
         public BlendState BlendState
         {
             get { return BlendState.NonPremultiplied; }

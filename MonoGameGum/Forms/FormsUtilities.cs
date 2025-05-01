@@ -3,8 +3,10 @@ using Gum.Wireframe;
 using GumRuntime;
 using Microsoft.Xna.Framework;
 using MonoGameGum.Forms.Controls;
+using MonoGameGum.Forms.Controls.Editor;
 using MonoGameGum.Forms.DefaultFromFileVisuals;
 using MonoGameGum.Forms.DefaultVisuals;
+using MonoGameGum.Forms.EditorVisuals;
 using MonoGameGum.GueDeriving;
 using MonoGameGum.Input;
 using RenderingLibrary;
@@ -37,6 +39,7 @@ public class FormsUtilities
     /// </remarks>
     public static void InitializeDefaults(Game? game = null)
     {
+        TryAdd(typeof(ButtonEditor), typeof(EditorButtonRuntime));
         TryAdd(typeof(Button), typeof(DefaultButtonRuntime));
         TryAdd(typeof(CheckBox), typeof(DefaultCheckboxRuntime));
         TryAdd(typeof(ComboBox), typeof(DefaultComboBoxRuntime));

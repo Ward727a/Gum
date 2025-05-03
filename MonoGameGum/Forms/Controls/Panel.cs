@@ -1,4 +1,5 @@
 ﻿using Gum.Wireframe;
+using Microsoft.Xna.Framework;
 using RenderingLibrary.Graphics;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,11 @@ public class Panel : FrameworkElement
 {
     List<FrameworkElement> _children = new List<FrameworkElement>();
 
+    public Color BackgroundColor { set
+        {
+            base.Visual.GetGraphicalUiElementByName("PanelBackground")?.SetProperty("Color", value);
+        } }
+
     /// <summary>
     /// Returns a read-only list of the children FrameworkElements of this panel. 
     /// </summary>
@@ -32,10 +38,8 @@ public class Panel : FrameworkElement
     }
 
     public Panel() :
-        base(new InteractiveGue(new InvisibleRenderable()))
+        base()
     {
-        
-        IsVisible = true;
 
     }
 

@@ -39,6 +39,7 @@ public class FormsUtilities
     /// </remarks>
     public static void InitializeDefaults(Game? game = null)
     {
+        TryAdd(typeof(Panel), typeof(DefaultPanelRuntime));
         TryAdd(typeof(ButtonEditor), typeof(EditorButtonRuntime));
         TryAdd(typeof(Button), typeof(DefaultButtonRuntime));
         TryAdd(typeof(CheckBox), typeof(DefaultCheckboxRuntime));
